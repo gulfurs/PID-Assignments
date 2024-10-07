@@ -1145,7 +1145,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.083646774
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1853,7 +1853,9 @@ GameObject:
   - component: {fileID: 890984284}
   - component: {fileID: 890984283}
   - component: {fileID: 890984282}
+  - component: {fileID: 890984286}
   - component: {fileID: 890984285}
+  - component: {fileID: 890984287}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -1977,7 +1979,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890984276}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
   m_Name: 
@@ -2063,6 +2065,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_System: {fileID: 890984280}
   m_DelayTime: 0
+--- !u!114 &890984286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890984276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 890984280}
+  m_TurnAmount: 20
+  m_DebounceTime: 0.5
+  m_EnableTurnLeftRight: 1
+  m_EnableTurnAround: 1
+  m_DelayTime: 0
+  m_LeftHandSnapTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Hand Snap Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 8204a1c9-6a94-4f82-a858-0d5d2d243932
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RightHandSnapTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Snap Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 374267c9-d4ee-4f9d-82cb-3deac2724af2
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &890984287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890984276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a50d88b55b45648927679791f472de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_GroupName: 
+  m_InteractionManager: {fileID: 33330759}
+  m_StartingGroupMembers: []
+  m_StartingInteractionOverridesMap: []
 --- !u!1 &918927644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,7 +2379,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &918927648
 MeshRenderer:
@@ -2406,7 +2466,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.08456516
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -3393,7 +3453,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.07
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1312329397
 MonoBehaviour:
@@ -3771,14 +3831,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ac216f0eb04754b1d938aac6380b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ManipulationInteractionGroup: {fileID: 0}
+  m_ManipulationInteractionGroup: {fileID: 890984287}
   m_DirectInteractor: {fileID: 0}
   m_RayInteractor: {fileID: 0}
   m_TeleportInteractor: {fileID: 1147861373}
   m_TeleportModeActivate: {fileID: -8061240218431744966, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_TeleportModeCancel: {fileID: 2307464322626738743, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_Turn: {fileID: 5101698808175986029, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_SnapTurn: {fileID: 0}
+  m_Turn: {fileID: 0}
+  m_SnapTurn: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_Move: {fileID: 0}
   m_UIScroll: {fileID: 0}
   m_SmoothMotionEnabled: 0
@@ -4013,7 +4073,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.07
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1520233274
 MonoBehaviour:
@@ -4551,7 +4611,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1887114569
 MeshRenderer:
@@ -4638,7 +4698,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.08113003
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
