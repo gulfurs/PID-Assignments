@@ -23,4 +23,5 @@ public class NewBehaviourScript : MonoBehaviour
         float grabValue = GrabnAnimation.action.ReadValue<float>();
         HandAnimator.SetFloat("Grab", grabValue);
     }
+    // Made my Simon Axelsen
 }
